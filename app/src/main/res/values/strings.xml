@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Hex Movie</string>
+    <string name="tab_text_1">Latest</string>
+    <string name="tab_text_2">Popular</string>
+
+    <string name="example">Hello</string>
+</resources>
