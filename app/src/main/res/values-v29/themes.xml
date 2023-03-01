@@ -6,4 +6,9 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="ShapeAppearanceOverlay.Rounded" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">25%</item>
+    </style>
+
 </resources>

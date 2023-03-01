@@ -26,8 +26,10 @@ class MovieLatestFragment : Fragment() {
         viewModel.movieLatest.observe(viewLifecycleOwner){
             binding.tvTitle.text = it.originalTitle
             binding.tvOverview.text = it.overview
-            if(it.imgUrl.isNullOrEmpty())
-                binding.imageView.load(getImage(it.imgUrl))
+
+            if (it.imgUrl.isNullOrEmpty()) {
+                binding.imageView.load(it.imgUrl?.let { it1 -> getImage(it1) })
+            }
         }
 
         viewModel.isLoading.observe(viewLifecycleOwner){

@@ -4,4 +4,5 @@
     <string name="tab_text_2">Latest</string>
 
     <string name="example">Hello</string>
+    <string name="img_not_available"> POSTER NOT AVAILABLE </string>
 </resources>

@@ -7,6 +7,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.hex.movie.R
 import com.hex.movie.view.latest.MovieLatestFragment
+import com.hex.movie.view.popular.MoviePopularsFragment
 
 private val TAB_TITLES = arrayOf(R.string.tab_text_1, R.string.tab_text_2)
 
@@ -24,7 +25,7 @@ class SectionsPagerAdapter(
 
     override fun createFragment(position: Int): Fragment {
         return when(position) {
-            0 -> PlaceholderFragment.newInstance(position)
+            0 -> MoviePopularsFragment()
             else -> MovieLatestFragment()
         }
     }
