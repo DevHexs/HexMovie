@@ -1,14 +1,20 @@
 package com.hex.movie.view.search
 
 import android.content.Context
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.hex.movie.data.model.movie.MovieListData
 import com.hex.movie.databinding.ItemSearchMovieBinding
+import com.hex.movie.view.details.DetailsMovieFragment
 
-class MovieSearchAdapter(private val movieListData: List<MovieListData>):
+class MovieSearchAdapter(
+    private val movieListData: List<MovieListData>,
+    private val fm: FragmentManager
+):
     RecyclerView.Adapter<MovieSearchAdapter.ViewHolder>(){
 
     inner class ViewHolder(val binding: ItemSearchMovieBinding):
@@ -31,6 +37,17 @@ class MovieSearchAdapter(private val movieListData: List<MovieListData>):
                 binding.imageView.load(getImage(this.posterPath))
                 binding.tvTitle.text = this.title
                 binding.tvAverageRate.text = "%.1f".format(this.voteAverage)
+
+                binding.imageView.setOnClickListener {
+                    val f = DetailsMovieFragment()
+                    val bundle = Bundle()
+                    bundle.putString("Title", this.title)
+                    bundle.putString("Overview", this.overview)
+                    bundle.putString("Url", getImage(this.posterPath))
+                    bundle.putString("VoteAverage", "%.1f".format(this.voteAverage))
+                    f.arguments = bundle
+                    f.show(fm,f.tag)
+                }
             }
         }
     }

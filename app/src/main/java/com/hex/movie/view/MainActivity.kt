@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.moviePageData.observe(this){
             it?.let {
-                binding.recyclerSearchMovies.adapter = MovieSearchAdapter(it.results)
+                binding.recyclerSearchMovies.adapter = MovieSearchAdapter(it.results, supportFragmentManager)
             }
         }
 
@@ -55,7 +55,10 @@ class MainActivity : AppCompatActivity() {
     override fun onBackPressed(){
         if(binding.searchView.isShowing){
             binding.searchView.hide()
-            binding.recyclerSearchMovies.adapter = MovieSearchAdapter(listOf())
+            binding.recyclerSearchMovies.adapter = MovieSearchAdapter(
+                listOf(),
+                supportFragmentManager
+            )
         }else{
             super.onBackPressed()
         }

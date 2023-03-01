@@ -24,7 +24,7 @@ class MoviePopularsFragment : Fragment() {
 
         viewModel.moviePageData.observe(viewLifecycleOwner){
             it?.let {
-                binding.recyclerPopularMovies.adapter = MoviePopularAdapter(it.results)
+                binding.recyclerPopularMovies.adapter = MoviePopularAdapter(it.results,childFragmentManager)
             }
         }
     }
