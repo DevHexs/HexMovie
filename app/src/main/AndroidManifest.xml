@@ -12,7 +12,7 @@
         android:label="@string/app_name"
         android:name=".App"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
+        android:theme="@style/Theme.HexMovie"
         tools:targetApi="31">
         <activity
             android:name=".view.MainActivity"
