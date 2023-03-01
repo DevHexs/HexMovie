@@ -1,8 +1,8 @@
-package com.hex.movie.data.model.popular
+package com.hex.movie.data.model.movie
 
 import com.google.gson.annotations.SerializedName
 
-data class MoviePopularResultsData(
+data class MovieListData(
     @SerializedName("adult"             ) var adult            : Boolean?       = null,
     @SerializedName("backdrop_path"     ) var backdropPath     : String?        = null,
     @SerializedName("genre_ids"         ) var genreIds         : ArrayList<Int> = arrayListOf(),

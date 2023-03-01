@@ -15,16 +15,12 @@ object NetworkService{
 
     @Singleton
     @Provides
-    fun providerRetrofit(): Retrofit{
+    fun providerRetrofit(): MovieApiClient {
         return Retrofit.Builder()
             .baseUrl("https://api.themoviedb.org/3/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
+            .create(MovieApiClient::class.java)
     }
 
-    @Singleton
-    @Provides
-    fun provideMovieClient(retrofit: Retrofit): MovieApiClient {
-        return retrofit.create(MovieApiClient::class.java)
-    }
 }

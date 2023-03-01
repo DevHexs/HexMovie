@@ -22,7 +22,7 @@ class MoviePopularsFragment : Fragment() {
 
         viewModel.onCreate()
 
-        viewModel.moviePopularsData.observe(viewLifecycleOwner){
+        viewModel.moviePageData.observe(viewLifecycleOwner){
             it?.let {
                 binding.recyclerPopularMovies.adapter = MoviePopularAdapter(it.results)
             }

@@ -5,10 +5,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.hex.movie.data.model.popular.MoviePopularResultsData
+import com.hex.movie.data.model.movie.MovieListData
 import com.hex.movie.databinding.ItemPopularMovieBinding
 
-class MoviePopularAdapter(private val moviePopularResultsData: List<MoviePopularResultsData>) :
+class MoviePopularAdapter(private val moviePopularResultsData: List<MovieListData>) :
     RecyclerView.Adapter<MoviePopularAdapter.ViewHolder>(){
 
     inner class ViewHolder(val binding: ItemPopularMovieBinding) :
