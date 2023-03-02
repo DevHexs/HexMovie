@@ -32,4 +32,4 @@ HexMovie is an application designed to show information about your favorite movi
 
 Add your [TMDB](https://www.themoviedb.org/) API key in the `local.properties` file:
 
-`tmdb_api_key=YOUR_API_KEY`
+`API_KEY = YOUR_API_KEY`
