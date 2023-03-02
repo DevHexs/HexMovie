@@ -7,11 +7,13 @@ HexMovie is an application designed to show information about your favorite movi
 ## Screenshots
 
 ---
+<p align="center">
+    <img src="image\1.png" alt="Home" width="300" >
+    <img src="image\2.png" alt="Home" width="300" >
+    <img src="image\3.png" alt="Home" width="300" >
+    <img src="image\4.png" alt="Home" width="300" >
+</p>
 
-<img src="image\1.png" alt="Home" width="300" >
-<img src="image\2.png" alt="Home" width="300" >
-<img src="image\3.png" alt="Home" width="300" >
-<img src="image\4.png" alt="Home" width="300" >
 
 ## Characteristics.
 
